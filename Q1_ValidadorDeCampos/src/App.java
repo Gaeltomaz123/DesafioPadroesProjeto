@@ -1,12 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
         String email = "bernardo.copstein@pucrs.br";
-        var validador = new Validador();
+        Tipo validaemail = Validador.valida(Validador.Tipo_.EMAIL, email);
+        System.out.println(validaemail);
 
-        if (validador.valida(Validador.Tipo.EMAIL, email)){
-            System.out.println(email+" é um email válido!");
-        }else{
-            System.out.println(email+" não é um email válido!");
-        }
+        String inteiro = "1";
+        Tipo validaint = Validador.valida(Validador.Tipo_.INTEIRO, inteiro);
+        System.out.println(validaint);
+
+        String matricula = "12345678";
+        Tipo validamat = Validador.valida(Validador.Tipo_.MATRICULA, matricula);
+        System.out.println(validamat);
     }
 }
