@@ -6,17 +6,18 @@ public class App {
         var cm = new VisualizadorDeMedia(dados.getValores());
         var cs = new VisualizadorDeSomatorio(dados.getValores());
 
+        dados.registraObserver(cs);
+        dados.registraObserver(cm);
+
         Scanner s = new Scanner(System.in);
         int valor = 0;
-        while(true){
+        while (true) {
             System.out.println("\nEntre um valor positivo maior que zero (0=fim):");
             valor = Integer.parseInt(s.nextLine());
-            if (valor == 0){
+            if (valor == 0) {
                 break;
             }
             dados.add(valor);
-            cs.acrescentaValor(valor);
-            cm.acrescentaValor(valor);
             cs.exibeSomatorio();
             cm.exibeMedia();
         }
