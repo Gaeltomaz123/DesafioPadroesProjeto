@@ -10,6 +10,7 @@ public class VisualizadorDeSomatorio implements Observer {
     @Override
     public void notifica(List<Integer> l) {
        this.valores = l;
+       exibeSomatorio();
     }
 
     public void exibeSomatorio(){

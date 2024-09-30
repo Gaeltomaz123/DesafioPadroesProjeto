@@ -10,6 +10,7 @@ public class VisualizadorDeMedia implements Observer {
     @Override
     public void notifica(List<Integer> l){
         this.valores = l;
+        exibeMedia();
     }
  
     public void exibeMedia(){
